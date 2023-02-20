@@ -6,6 +6,7 @@
 package pkg5toproyect;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -17,6 +18,57 @@ public class EjeBu {
     /**
      * @param args the command line arguments
      */
+    
+    public static void Ejemplo(){
+        System.out.println("Hola Mundo");
+    }
+    
+    public static void Persona(String nombre){
+        System.out.println("Tu nombre es: " + nombre);
+    }
+    
+    public static void Usuario(String usuario, String clave){
+        if (usuario == "Admin" && clave == "Admin"){
+            System.out.println("Bienvenido: " + usuario);
+        }
+        else{
+            System.out.println("Usuario o Clave incorrecto");
+        }
+    }
+    
+    public static void Puerta(int a){
+        System.out.println("Elige una puerta del 1 al 3");
+        if (a == 1) {
+            System.out.println("Te moriste no homo");
+        }
+        else if (a == 2){
+            System.out.println("Te volviste homo y te mataron");
+        }
+        else{
+            System.out.println("Sobreviviste al apocalipsis gay");
+        }
+    }
+    public static void Bucle(){
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Esto es un bucle" + i);
+        }
+    }
+    public static double menor(double a, double b, double c){
+        return Math.min(Math.min(a, b),c);
+    }
+    public static double mayor(double a, double b, double c){
+        return Math.max(Math.max(a, b),c);
+    }
+    public static double promedio(double a, double b, double c){
+        return a+b+c/3;
+    }
+    
+     enum Nivel {
+        Bajo,
+        Medio,
+        Alto
+    }
+    
     public static void main(String[] args) {
         // TODO code application logic here
 //     for (int x=1;x<=10;x++){
@@ -146,8 +198,29 @@ public class EjeBu {
 //            else{
 //                System.out.println("Sacaste una D, estas reprobado");
 //            }
-//            
 
+//        String cadena="Mi vida en ipisa es muy interesante";
+//  
+//        int contador=0;
+//        for (int i=0;i<cadena.length();i++){
+//            //Comprobamos si el caracter es una vocal
+//            if(cadena.charAt(i)=='a' || 
+//                    cadena.charAt(i)=='e' || 
+//                    cadena.charAt(i)=='i' || 
+//                    cadena.charAt(i)=='o' || 
+//                    cadena.charAt(i)=='u'){
+//                contador++;
+//            }
+//        }
+//  
+//        System.out.println("Hay "+contador+" vocales");
+
+//        String cadena="Mi vida en ipisa es muy interesante";
+// 
+//        for (int i=0;i<cadena.length();i++){
+//            //Hacemos un casting para convertir el char a int
+//            System.out.print((int)cadena.charAt(i)+" ");
+//        }
 //           String nombre, apellido;
 //           Scanner nom = new Scanner(System.in);
 //           System.out.println("Coloca tu nombre");
@@ -180,21 +253,156 @@ public class EjeBu {
 //        }
 //            System.out.println(Arrays.toString(Lista));
             
-            Scanner sc = new Scanner(System.in);
+//            Scanner sc = new Scanner(System.in);
             //int [][] numb =  {{1,2,3},{4,5,6}};
-            int [][] numb =  new int [2][2];
+//            int [][] numb =  new int [2][2];
 //          System.out.println(Arrays.deepToString(numb));
 
-         for (int i = 0; i<2; i++){
-             for (int j = 0; j<2; j++){
-                System.out.println("Coloque la posicion: " + i + " " + j);
-                numb[i][j] = sc.nextInt();                
-             }             
-         }
-         System.out.println(Arrays.deepToString(numb));
-            
+//         for (int i = 0; i<2; i++){
+//             for (int j = 0; j<2; j++){
+//                System.out.println("Coloque la posicion: " + i + " " + j);
+//                numb[i][j] = sc.nextInt();                
+//             }             
+//         }
+//         System.out.println(Arrays.deepToString(numb));
+//         
+//        int [][]a = new int[10][10];    
+//        for(int i = 0; i < 10; i++)
+//        {
+//            for(int j = 0; j < 10; j++)
+//            {
+//         System.out.printf("%2d ", a[i][j]);
+//                }
+//            System.out.println();
+//   }
+
+
+//        int[] numeros = new int[]{20, 30, 25, 35, -16, 60, -100};
+//       //Calcula la suma de todos los elementos en el array
+//       int suma = 0;
+//       for(int i=0; i < numeros.length ; i++)
+//        suma = suma + numeros[i];
+//       //calcula el promedio
+//        double promedio = suma / numeros.length;
+//        System.out.println("El promedio de los valores del array es : " + promedio); 
+        
+//           int[] reversararray = {
+//            1789, 2035, 1899, 1456, 2013, 
+//            1458, 2458, 1254, 1472, 2365, 
+//            1456, 2165, 1457, 2456};
+//            System.out.println("Array Original : "+Arrays.toString(reversararray));  
+//            for(int i = 0; i < reversararray.length / 2; i++)
+//            {
+//            int temp = reversararray[i];
+//            reversararray[i] = reversararray[reversararray.length - i - 1];
+//            reversararray[reversararray.length - i - 1] = temp;
+//            }
+//            System.out.println("Reversar el Array : "+Arrays.toString(reversararray));
+//        int[] matrix = {1, 3, 8, 8, 1, 1, 7, 3};
+// 
+//        for (int i = 0; i < matrix.length-1; i++)
+//        {
+//            for (int j = i+1; j < matrix.length; j++)
+//            {
+//                if ((matrix[i] == matrix[j]) && (i != j))
+//                {
+//                    System.out.println("Elementos Duplicados : "+matrix[j]);
+//                }
+//            }
+//        }
+//
+//         int imparpar [][] = new int [25][25]; 
+//        
+//        for(int i = 1; i<25; i++){
+//            System.out.println();
+//            for(int a =1; a<25; a++){
+//                
+//            imparpar [i][a] = a*2 + i*3;
+//     
+//                System.out.print(imparpar [i][a]+ "\t");
+//    }
+//    }
+
+//         int b,x = 100;
+//
+//
+//        for (b = 1; b<x; b++){
+//
+//            if(b% 2 == 1){
+//
+//            System.out.println(b + "impar");
+//            }
+//
+//            else{
+//
+//            System.out.println(b + "par");
+//
+//            }
+//        }
+//
+//
+//
+//        int[][] prueba = new int [10][10];
+//
+//        int i,j;
+//
+//
+//        for (i = 0; i<10; i++){
+//
+//            for( j = 0; j<10; j++){
+//
+//                System.out.println("matriz" + i + "" + j);
+////                prueba[i][j] = b;
+//            }
+//        }
+//
+//        // Creamos el Array nombres
+//        String [] nombres = {"Alba","Marisol","Rafaelina"};
+//
+//        // Mediante Arrays creamos una nueva lista
+//        List<String> listaNombres = Arrays.asList(nombres);
+//        
+//        // Recorremos la lista elementos con un foreach
+//
+//        for (String str : listaNombres) {
+//	System.out.println(str);
+//        }
+        
+//        // El parametro 0 representa el indice que queremos eliminar
+//        listaNombres.remove(0);
+//
+//        // Eliminar elemento mediante su nombre
+//        listaNombres.remove("Alba");
+//
+//        // Para eliminar todos los elmentos de la lista usamos clear
+//        listaNombres.clear();
+        
+//            Scanner re = new Scanner(System.in);
+//            System.out.println("Agrega un numero");
+//            int a = re.nextInt();
+//            Ejemplo();
+//            Persona("Santiago"); 
+//            Usuario("Admin", "Admin");
+//            Puerta(a);
+//            Bucle();
+
+//             Nivel Voltaje = Nivel.Bajo; 
+//             System.out.println(Voltaje);
+
+//        Scanner in = new Scanner(System.in);
+//        System.out.print("Ingrese el primer numero: ");
+//        double a = in.nextDouble();
+//        System.out.print("Ingrese el segundo numero: ");
+//        double b = in.nextDouble();
+//        System.out.print("Ingrese el tercer numeror: ");
+//        
+//        double c = in.nextDouble();
+//        System.out.print("el valor mas pequeño es " + menor(a, b, c)+"\n" );
+//        System.out.print("el valor mas grande es " + mayor(a, b, c)+"\n" );
+//        System.out.print("el valor promedio es " + promedio(a, b, c)+"\n" );
+        
+
+        
+            }
            
             }
-    
-         
-    }   
